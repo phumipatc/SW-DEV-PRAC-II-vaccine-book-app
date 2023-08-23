@@ -10,7 +10,8 @@ export default function Banner() {
 					Vaccination Booking App
 				</h1>
 				<h3 className={styles.bannerSubheader}>
-				Vaccination is an essential step in building resilience in your body against potential diseases that may pose a threat in the future. <br />
+					Vaccination is an essential step in building resilience in your body against
+					potential diseases that may pose a threat in the future. <br />
 					Book your vaccination appointment now!
 				</h3>
 			</div>
