@@ -1,0 +1,22 @@
+.banner {
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+.bannerHeader {
+	position: relative;
+	top: 20vh;
+	z-index: 20;
+	text-align: center;
+	font-size: 25px;
+	color: var(--color-orange);
+}
+
+.bannerSubheader {
+	padding: 10px;
+	font-size: 20px;
+}

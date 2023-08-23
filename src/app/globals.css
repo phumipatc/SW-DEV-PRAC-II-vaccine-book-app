@@ -1,0 +1,20 @@
+:root {
+  --color-orange: #eeb902;
+  --color-orange-red: #f45d01;
+  --color-black: #000000;
+  --color-grey: #474647;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-orange);
+  font-family: sans-serif;
+  font-size:16px;
+  font-weight: 400;
+}

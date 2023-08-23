@@ -1,0 +1,11 @@
+.main {
+  padding: 0;
+}
+
+.allVaccineCard {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* fix number of column to 2 */
+  
+}
