@@ -10,7 +10,9 @@ export default function VaccineCard() {
 			<div className={styles.cardBody}>
 				{/* give some information about */}
 				<p>
-				A new dengue vaccine is approved for use in children aged 9–16 years with laboratory-confirmed previous dengue virus infection and living in areas where dengue is endemic (occurs frequently or continuously).
+					A new dengue vaccine is approved for use in children aged 9–16 years with
+					laboratory-confirmed previous dengue virus infection and living in areas
+					where dengue is endemic (occurs frequently or continuously).
 				</p>
 			</div>
 		</div>
