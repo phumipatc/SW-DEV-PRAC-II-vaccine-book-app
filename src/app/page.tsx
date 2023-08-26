@@ -5,10 +5,21 @@ import Banner from '@/components/banner'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <Banner />
       <div className={styles.allVaccineCard}>
-        <VaccineCard />
+        <VaccineCard
+          header='Chulalongkorn Hospital'
+          imgSrc='/img/chula.jpg'
+        />
+        <VaccineCard
+          header='Rajavithi Hospital'
+          imgSrc='/img/rajavithi.jpg'
+        />
+        <VaccineCard
+          header='Thammasat University Hospital'
+          imgSrc='/img/thammasat.jpg'
+        />
       </div>
     </main>
   )

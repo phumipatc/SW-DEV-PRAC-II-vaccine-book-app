@@ -3,13 +3,13 @@
 	padding: 0;
 	margin: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 90vh;
 	position: relative;
 }
 
 .bannerHeader {
 	position: relative;
-	top: 20vh;
+	top: 5vh;
 	z-index: 20;
 	text-align: center;
 	font-size: 25px;

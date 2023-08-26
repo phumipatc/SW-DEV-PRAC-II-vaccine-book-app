@@ -1,19 +1,22 @@
 import styles from './vaccineCard.module.css'
+import Image from 'next/image'
 
-export default function VaccineCard() {
+export default function VaccineCard(
+	info:{
+		header: string;
+		imgSrc: string;
+		}
+	)
+{
 	return (
-		<div className={styles.card}>
-			<div className={styles.cardHeader}>
-				{/*example Vaccine Name */}
-				Dengue vaccine
+		<div className='w-1/4 h-[300px] rounded-lg shadow-lg bg-gray-300 hover:w-1/3'>
+			<div className='w-full h-[70%] relative rounded-t-lg'>
+				<Image src={info.imgSrc} alt={info.header}
+				className='object-cover rounded-t-lg'
+				fill={true}/>
 			</div>
-			<div className={styles.cardBody}>
-				{/* give some information about */}
-				<p>
-					A new dengue vaccine is approved for use in children aged 9–16 years with
-					laboratory-confirmed previous dengue virus infection and living in areas
-					where dengue is endemic (occurs frequently or continuously).
-				</p>
+			<div className='p-[16px]'>
+				{info.header}
 			</div>
 		</div>
 	)

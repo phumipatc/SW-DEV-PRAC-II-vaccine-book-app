@@ -1,0 +1,12 @@
+.itemContainer {
+	width: 120px;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-decoration: none;
+	color: black;
+}
+
+.itemContainer:hover {
+	color: var(--color-grey);
+}
