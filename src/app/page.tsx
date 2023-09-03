@@ -1,22 +1,22 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import VaccineCard from '@/components/vaccineCard'
+import ProductCard from '@/components/ProductCard'
 import Banner from '@/components/banner'
 
 export default function Home() {
   return (
     <main>
       <Banner />
-      <div className={styles.allVaccineCard}>
-        <VaccineCard
+      <div className={styles.allProductCard}>
+        <ProductCard
           header='Chulalongkorn Hospital'
           imgSrc='/img/chula.jpg'
         />
-        <VaccineCard
+        <ProductCard
           header='Rajavithi Hospital'
           imgSrc='/img/rajavithi.jpg'
         />
-        <VaccineCard
+        <ProductCard
           header='Thammasat University Hospital'
           imgSrc='/img/thammasat.jpg'
         />

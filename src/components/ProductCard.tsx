@@ -1,7 +1,7 @@
-import styles from './vaccineCard.module.css'
 import Image from 'next/image'
+import InteractiveCard from './InteractiveCard';
 
-export default function VaccineCard(
+export default function ProductCard(
 	info:{
 		header: string;
 		imgSrc: string;
@@ -9,7 +9,7 @@ export default function VaccineCard(
 	)
 {
 	return (
-		<div className='w-1/4 h-[300px] rounded-lg shadow-lg bg-gray-300 hover:w-1/3'>
+		<InteractiveCard contentName={info.header}>
 			<div className='w-full h-[70%] relative rounded-t-lg'>
 				<Image src={info.imgSrc} alt={info.header}
 				className='object-cover rounded-t-lg'
@@ -18,6 +18,6 @@ export default function VaccineCard(
 			<div className='p-[16px]'>
 				{info.header}
 			</div>
-		</div>
+		</InteractiveCard>
 	)
 }
