@@ -4,7 +4,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
 import { Select, MenuItem } from "@mui/material"
 
-export default function LocationDateReserve() {
+export default function Form() {
 	return (
 		<div className='bg-slate-100 rounded-lg space-y-2 w-fit px-10 py-5 flex flex-col justify-center'>
 			<div className="text-md text-left text-gray-600">

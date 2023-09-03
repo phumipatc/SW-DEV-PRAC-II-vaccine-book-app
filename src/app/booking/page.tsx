@@ -1,4 +1,4 @@
-import LocationDateReserve from "@/components/LocationDateReserve"
+import Form from "@/components/Form"
 
 export default function Booking() {
 	return (
@@ -7,9 +7,9 @@ export default function Booking() {
 				Booking
 			</div>
 			<div className="w-fit space-y-2">
-				<LocationDateReserve/>
+				<Form/>
 			</div>
-			<button className="block rounded-md bg-orange-500 hover:bg-orange-600 px-3 py-2 shadow-sm text-white">
+			<button className="block ring-inset ring-2 ring-orange-300 rounded-md bg-orange-500 hover:bg-orange-600 px-3 py-2 shadow-sm text-white">
 				Book
 			</button>
 		</main>
