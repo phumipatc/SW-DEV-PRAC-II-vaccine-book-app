@@ -2,7 +2,7 @@
   "name": "vaccine-book-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://phumipatc.github.io/vaccine-book-app",
+  "homepage": "https://phumipatc.github.io/SW-DEV-PRAC-II-vaccine-book-app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
