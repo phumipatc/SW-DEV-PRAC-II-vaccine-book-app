@@ -11,6 +11,10 @@ export default function ProductCard(
 	useEffect(()=>{
 		setRating(passedRating);
 	},[passedRating]);
+	// if(rating != passedRating){
+	// 	setRating(passedRating);
+	// }
+	
 	return (
 		<InteractiveCard contentName={header}>
 			<div className='w-full h-[70%] relative rounded-t-lg'>
