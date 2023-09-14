@@ -41,12 +41,17 @@ export default function CardPanel() {
 				passedRating={ratingList.findIndex((hospitalName)=>hospitalName=='thammasat') != -1 ? ratingMap.get('thammasat') || 0 : 0}
 				/>
 			</div>
-			<div>
+			<div className="flex flex-col justify-center items-center mt-[20px] border-[3px] border-black rounded-lg p-[20px] bg-[#474647] text-white">
 				{/* show all hospital rating here */}
+				{/* white gray bg */}
+				<p className="text-4xl">
+					{ratingList.length} hospital(s) rated
+				</p>
 				<List>
 					{ratingList.map((hospitalName, index) => {
 						return (
-							<div key={index} onClick={()=>dispatchRating({type: 'remove', hospitalName: hospitalName, rating: 0}) }>
+							// button border
+							<div className="border-[2px] p-2 bg-[#101010] hover:bg-[#FFFFFF] hover:text-black cursor-pointer" key={index} onClick={()=>dispatchRating({type: 'remove', hospitalName: hospitalName, rating: 0}) }>
 								{hospitalName} : {ratingMap.get(hospitalName)}
 							</div>
 						)

@@ -21,7 +21,7 @@ export default function ProductCard(
 			<div className='p-[16px]'>
 				{header}
 			</div>
-			<Rating name="rating" value={rating} onChange={(e, newValue)=>{e.stopPropagation(); setRating(newValue || 0); onRatingChange(newValue)}}/>
+			<Rating name="rating" value={rating} onChange={(e, newValue)=>{e.stopPropagation(); setRating(newValue||0); onRatingChange(newValue||0)}}/>
 		</InteractiveCard>
 	)
 }
