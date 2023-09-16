@@ -278,7 +278,7 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 86062)), "D:\\Code\\CU\\SW_DEV_PRAC_II\\vaccine-book-app\\src\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 12108)), "D:\\Code\\CU\\SW_DEV_PRAC_II\\vaccine-book-app\\src\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 73881))).default(props))],
     apple: [],
@@ -333,191 +333,10 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 61115:
+/***/ 79417:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 52987, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50831, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 56926, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 44282, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 16505, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 31232, 23))
-
-/***/ }),
-
-/***/ 28883:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 87140));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 81632))
-
-/***/ }),
-
-/***/ 87140:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ CardPanel)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(56786);
-// EXTERNAL MODULE: external "next/dist/compiled/react"
-var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./node_modules/next/image.js
-var next_image = __webpack_require__(52451);
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-;// CONCATENATED MODULE: ./src/components/InteractiveCard.tsx
-/* __next_internal_client_entry_do_not_use__ default auto */ 
-function InteractiveCard({ children, contentName }) {
-    function onCardSelected() {
-        alert("You selected " + contentName + ".");
-    }
-    function onCardMouseAction(event) {
-        if (event.type == "mouseover") {
-            event.currentTarget.classList.remove("shadow-lg");
-            event.currentTarget.classList.remove("bg0-white");
-            event.currentTarget.classList.add("shadow-2xl");
-            event.currentTarget.classList.add("bg-neutral-200");
-        } else {
-            event.currentTarget.classList.remove("shadow-2xl");
-            event.currentTarget.classList.remove("bg-neutral-200");
-            event.currentTarget.classList.add("shadow-lg");
-            event.currentTarget.classList.add("bg-white");
-        }
-    }
-    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        className: "w-[300px] h-[300px] rounded-lg shadow-lg bg-white",
-        onClick: onCardSelected,
-        onMouseOver: (e)=>onCardMouseAction(e),
-        onMouseOut: (e)=>onCardMouseAction(e),
-        children: children
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@mui/material/node/index.js
-var node = __webpack_require__(17421);
-;// CONCATENATED MODULE: ./src/components/ProductCard.tsx
-
-
-
-
-
-function ProductCard({ imgSrc, header, onRatingChange, passedRating }) {
-    const [rating, setRating] = (0,react_.useState)(passedRating);
-    (0,react_.useEffect)(()=>{
-        setRating(passedRating);
-    }, [
-        passedRating
-    ]);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(InteractiveCard, {
-        contentName: header,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "w-full h-[70%] relative rounded-t-lg",
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: imgSrc,
-                    alt: header,
-                    className: "object-cover rounded-t-lg",
-                    fill: true
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "p-[16px]",
-                children: header
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(node.Rating, {
-                name: "rating",
-                value: rating,
-                onChange: (e, newValue)=>{
-                    e.stopPropagation();
-                    setRating(newValue || 0);
-                    onRatingChange(newValue);
-                }
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./src/components/CardPanel.tsx
-/* __next_internal_client_entry_do_not_use__ default auto */ 
-
-
-
-function CardPanel() {
-    const [ratingList, setRatingList] = (0,react_.useState)([]); // ['chula', 'rajavithi', 'thammasat'
-    const ratingReducer = (ratingMap, action)=>{
-        if (action.type == "add") ratingMap.set(action.hospitalName, action.rating);
-        else if (action.type == "remove") ratingMap.delete(action.hospitalName);
-        setRatingList(Array.from(ratingMap.keys()));
-        return ratingMap;
-    };
-    // ratingList is List of hospital name
-    const [ratingMap, dispatchRating] = (0,react_.useReducer)(ratingReducer, new Map());
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: "flex flex-row flex-wrap justify-center mt-[20px] space-x-[20px]",
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(ProductCard, {
-                        header: "Chulalongkorn Hospital",
-                        imgSrc: "/img/chula.jpg",
-                        onRatingChange: (rating)=>dispatchRating({
-                                type: "add",
-                                hospitalName: "chula",
-                                rating: rating
-                            }),
-                        passedRating: ratingList.findIndex((hospitalName)=>hospitalName == "chula") != -1 ? ratingMap.get("chula") || 0 : 0
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(ProductCard, {
-                        header: "Rajavithi Hospital",
-                        imgSrc: "/img/rajavithi.jpg",
-                        onRatingChange: (rating)=>dispatchRating({
-                                type: "add",
-                                hospitalName: "rajavithi",
-                                rating: rating
-                            }),
-                        passedRating: ratingList.findIndex((hospitalName)=>hospitalName == "rajavithi") != -1 ? ratingMap.get("rajavithi") || 0 : 0
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(ProductCard, {
-                        header: "Thammasat University Hospital",
-                        imgSrc: "/img/thammasat.jpg",
-                        onRatingChange: (rating)=>dispatchRating({
-                                type: "add",
-                                hospitalName: "thammasat",
-                                rating: rating
-                            }),
-                        passedRating: ratingList.findIndex((hospitalName)=>hospitalName == "thammasat") != -1 ? ratingMap.get("thammasat") || 0 : 0
-                    })
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                children: /*#__PURE__*/ jsx_runtime_.jsx(node.List, {
-                    children: ratingList.map((hospitalName, index)=>{
-                        return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                            onClick: ()=>dispatchRating({
-                                    type: "remove",
-                                    hospitalName: hospitalName,
-                                    rating: 0
-                                }),
-                            children: [
-                                hospitalName,
-                                " : ",
-                                ratingMap.get(hospitalName)
-                            ]
-                        }, index);
-                    })
-                })
-            })
-        ]
-    });
-}
-
 
 /***/ }),
 
@@ -575,6 +394,14 @@ function Banner() {
                         ]
                     })
                 ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                className: "relative top-[65vh] left-[90vw] z-20 bg-[#FFFFFF] hover:bg-[#474647] hover:text-white text-black rounded-lg px-[20px] py-[10px] mt-[20px]",
+                onClick: (e)=>{
+                    e.stopPropagation();
+                    window.location.href = "/hospital";
+                },
+                children: "Hospital List"
             })
         ]
     });
@@ -589,14 +416,13 @@ function Banner() {
 // Exports
 module.exports = {
 	"banner": "banner_banner__Ag4N_",
-	"bannerHeader": "banner_bannerHeader__vZ1X8",
-	"bannerSubheader": "banner_bannerSubheader__kDYe1"
+	"bannerHeader": "banner_bannerHeader__vZ1X8"
 };
 
 
 /***/ }),
 
-/***/ 86062:
+/***/ 12108:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -625,29 +451,12 @@ const __default__ = proxy.default;
 
 
 /* harmony default export */ const banner = (__default__);
-;// CONCATENATED MODULE: ./src/components/CardPanel.tsx
-
-const CardPanel_proxy = (0,module_proxy.createProxy)(String.raw`D:\Code\CU\SW_DEV_PRAC_II\vaccine-book-app\src\components\CardPanel.tsx`)
-
-// Accessing the __esModule property and exporting $$typeof are required here.
-// The __esModule getter forces the proxy target to create the default export
-// and the $$typeof value is for rendering logic to determine if the module
-// is a client boundary.
-const { __esModule: CardPanel_esModule, $$typeof: CardPanel_$$typeof } = CardPanel_proxy;
-const CardPanel_default_ = CardPanel_proxy.default;
-
-
-/* harmony default export */ const CardPanel = (CardPanel_default_);
 ;// CONCATENATED MODULE: ./src/app/page.tsx
 
 
-
 function Home() {
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(banner, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx(CardPanel, {})
-        ]
+    return /*#__PURE__*/ jsx_runtime_.jsx("main", {
+        children: /*#__PURE__*/ jsx_runtime_.jsx(banner, {})
     });
 }
 
@@ -661,7 +470,7 @@ function Home() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,191,451,617], () => (__webpack_exec__(90540)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,957,451,362], () => (__webpack_exec__(90540)));
 module.exports = __webpack_exports__;
 
 })();

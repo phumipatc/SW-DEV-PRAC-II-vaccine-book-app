@@ -1,5 +1,7 @@
 {
   "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
-  "/booking/page": "/booking"
+  "/booking/page": "/booking",
+  "/(hospitalinfo)/hospital/page": "/hospital",
+  "/(hospitalinfo)/hospital/[hid]/page": "/hospital/[hid]"
 }
