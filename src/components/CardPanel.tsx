@@ -51,7 +51,10 @@ export default function CardPanel() {
 					{ratingList.map((hospitalName, index) => {
 						return (
 							// button border
-							<div className="border-[2px] p-2 bg-[#101010] hover:bg-[#FFFFFF] hover:text-black cursor-pointer" key={index} onClick={()=>dispatchRating({type: 'remove', hospitalName: hospitalName, rating: 0}) }>
+							<div
+							className="border-[2px] p-2 bg-[#101010] hover:bg-[#FFFFFF] hover:text-black cursor-pointer"
+							key={index}
+							onClick={()=>dispatchRating({type: 'remove', hospitalName: hospitalName, rating: 0}) }>
 								{hospitalName} : {ratingMap.get(hospitalName)}
 							</div>
 						)
