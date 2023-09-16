@@ -20,6 +20,12 @@ export default function Banner() {
 					Book your vaccination appointment now!
 				</h3>
 			</div>
+			<button
+				className='relative top-[65vh] left-[90vw] z-20 bg-[#FFFFFF] hover:bg-[#474647] hover:text-white text-black rounded-lg px-[20px] py-[10px] mt-[20px]'
+				onClick={(e)=>{e.stopPropagation(); window.location.href='/hospital'}}
+				>
+					Hospital List
+				</button>
 		</div>
 	)
 }

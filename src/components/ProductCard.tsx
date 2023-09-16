@@ -17,15 +17,20 @@ export default function ProductCard(
 	
 	return (
 		<InteractiveCard contentName={header}>
-			<div className='w-full h-[70%] relative rounded-t-lg'>
+			<div className='w-full h-[65%] relative rounded-t-lg'>
 				<Image src={imgSrc} alt={header}
 				className='object-cover rounded-t-lg'
 				fill={true}/>
 			</div>
-			<div className='p-[16px]'>
+			<div className='p-[16px] h-[25%]'>
 				{header}
 			</div>
-			<Rating name="rating" value={rating} onChange={(e, newValue)=>{e.stopPropagation(); setRating(newValue||0); onRatingChange(newValue||0)}}/>
+			<Rating
+			name="rating"
+			value={rating}
+			onClick={(e)=>{e.stopPropagation();}}
+			onChange={(e, newValue)=>{e.stopPropagation(); setRating(newValue||0); onRatingChange(newValue||0)}}
+			/>
 		</InteractiveCard>
 	)
 }

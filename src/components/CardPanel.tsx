@@ -2,8 +2,9 @@
 
 import { useReducer, useState } from "react";
 import ProductCard from "./ProductCard";
-import styles from './CardPanel.module.css'
 import { List } from "@mui/material";
+import { mock } from "node:test";
+import Link from "next/link";
 
 export default function CardPanel() {
 	const [ratingList, setRatingList] = useState<string[]>([]); // ['chula', 'rajavithi', 'thammasat'
@@ -19,27 +20,26 @@ export default function CardPanel() {
 	// ratingList is List of hospital name
 	const [ratingMap, dispatchRating] = useReducer(ratingReducer, new Map<string, number>());
 
+	const mockProductCard = [{hid:"001", name:"Chulalongkorn Hospital", shortName:"chula", img:"/img/chula.jpg"},
+		{hid:"002", name:"Rajavithi Hospital", shortName:"rajavithi", img:"/img/rajavithi.jpg"},
+		{hid:"003", name:"Thammasat University Hospital", shortName:"thammasat", img:"/img/thammasat.jpg"}]
+
 	return (
 		<div>
 			<div className='flex flex-row flex-wrap justify-center mt-[20px] space-x-[20px]'>
-				<ProductCard
-				header='Chulalongkorn Hospital'
-				imgSrc='/img/chula.jpg'
-				onRatingChange={(rating:number) => dispatchRating({type: 'add', hospitalName: 'chula', rating: rating})}
-				passedRating={ratingList.findIndex((hospitalName)=>hospitalName=='chula') != -1 ? ratingMap.get('chula') || 0 : 0}
-				/>
-				<ProductCard
-				header='Rajavithi Hospital'
-				imgSrc='/img/rajavithi.jpg'
-				onRatingChange={(rating:number) => dispatchRating({type: 'add', hospitalName: 'rajavithi', rating: rating})}
-				passedRating={ratingList.findIndex((hospitalName)=>hospitalName=='rajavithi') != -1 ? ratingMap.get('rajavithi') || 0 : 0}
-				/>
-				<ProductCard
-				header='Thammasat University Hospital'
-				imgSrc='/img/thammasat.jpg'
-				onRatingChange={(rating:number) => dispatchRating({type: 'add', hospitalName: 'thammasat', rating: rating})}
-				passedRating={ratingList.findIndex((hospitalName)=>hospitalName=='thammasat') != -1 ? ratingMap.get('thammasat') || 0 : 0}
-				/>
+				{
+					mockProductCard.map((info) => (
+						<Link href={`/hospital/${info.hid}`} key={info.hid} passHref={true} className="w-1/5">
+							<ProductCard
+							header={info.name}
+							imgSrc={info.img}
+							onRatingChange={(rating:number) => dispatchRating({type: 'add', hospitalName: info.shortName, rating: rating})}
+							passedRating={ratingList.findIndex((hospitalName)=>hospitalName==info.shortName) != -1 ? ratingMap.get(info.shortName) || 0 : 0}
+							/>
+						</Link>
+						)
+					)
+				}
 			</div>
 			<div className="flex flex-col justify-center items-center mt-[20px] border-[3px] border-black rounded-lg p-[20px] bg-[#474647] text-white">
 				{/* show all hospital rating here */}
