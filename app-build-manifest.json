@@ -1,26 +1,26 @@
 {
   "pages": {
     "/layout": [
-      "static/chunks/webpack-6422f667387e04f7.js",
+      "static/chunks/webpack-280ee4e1194c86b8.js",
       "static/chunks/fd9d1056-87e3e28da169ca4b.js",
       "static/chunks/596-ef52134cf7e38d84.js",
       "static/chunks/main-app-03837654c9f3511b.js",
       "static/chunks/222-2ad08b3f409be0f1.js",
       "static/chunks/685-912c72be5c0f1b08.js",
-      "static/css/f4b75c888318c449.css",
-      "static/chunks/app/layout-c9706f95ed6d1ec1.js"
+      "static/css/28ef638406b1e1a1.css",
+      "static/chunks/app/layout-9c4540f374499d61.js"
     ],
     "/page": [
-      "static/chunks/webpack-6422f667387e04f7.js",
+      "static/chunks/webpack-280ee4e1194c86b8.js",
       "static/chunks/fd9d1056-87e3e28da169ca4b.js",
       "static/chunks/596-ef52134cf7e38d84.js",
       "static/chunks/main-app-03837654c9f3511b.js",
       "static/chunks/222-2ad08b3f409be0f1.js",
       "static/css/c80afd01954a06c4.css",
-      "static/chunks/app/page-eef984ebd44e9846.js"
+      "static/chunks/app/page-04107243ae6cc6a2.js"
     ],
     "/booking/page": [
-      "static/chunks/webpack-6422f667387e04f7.js",
+      "static/chunks/webpack-280ee4e1194c86b8.js",
       "static/chunks/fd9d1056-87e3e28da169ca4b.js",
       "static/chunks/596-ef52134cf7e38d84.js",
       "static/chunks/main-app-03837654c9f3511b.js",
@@ -29,7 +29,7 @@
       "static/chunks/app/booking/page-71803ba826b127d4.js"
     ],
     "/(hospitalinfo)/hospital/page": [
-      "static/chunks/webpack-6422f667387e04f7.js",
+      "static/chunks/webpack-280ee4e1194c86b8.js",
       "static/chunks/fd9d1056-87e3e28da169ca4b.js",
       "static/chunks/596-ef52134cf7e38d84.js",
       "static/chunks/main-app-03837654c9f3511b.js",
@@ -39,7 +39,7 @@
       "static/chunks/app/(hospitalinfo)/hospital/page-e68e6273777432c1.js"
     ],
     "/(hospitalinfo)/hospital/[hid]/page": [
-      "static/chunks/webpack-6422f667387e04f7.js",
+      "static/chunks/webpack-280ee4e1194c86b8.js",
       "static/chunks/fd9d1056-87e3e28da169ca4b.js",
       "static/chunks/596-ef52134cf7e38d84.js",
       "static/chunks/main-app-03837654c9f3511b.js",

@@ -278,7 +278,7 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 12108)), "D:\\Code\\CU\\SW_DEV_PRAC_II\\vaccine-book-app\\src\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 71077)), "D:\\Code\\CU\\SW_DEV_PRAC_II\\vaccine-book-app\\src\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 73881))).default(props))],
     apple: [],
@@ -333,10 +333,97 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 79417:
+/***/ 45514:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 81632))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 81632));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 34898))
+
+/***/ }),
+
+/***/ 34898:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ PromoteCard)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(56786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(18038);
+;// CONCATENATED MODULE: ./src/hooks/useWindowListener.tsx
+
+function useWindowListener(eventType, listener) {
+    (0,react_.useEffect)(()=>{
+        window.addEventListener(eventType, listener);
+        return ()=>{
+            window.removeEventListener(eventType, listener);
+        };
+    }, []);
+}
+
+;// CONCATENATED MODULE: ./src/components/VideoPlayer.tsx
+
+
+
+function VideoPlayer({ videoStatus, videoPath }) {
+    const videoRef = (0,react_.useRef)(null);
+    useWindowListener("contextmenu", (e)=>e.preventDefault());
+    (0,react_.useEffect)(()=>{
+        if (videoStatus) {
+            videoRef.current?.play();
+        } else {
+            videoRef.current?.pause();
+        }
+    }, [
+        videoStatus
+    ]);
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        children: /*#__PURE__*/ jsx_runtime_.jsx("video", {
+            className: "w-[100%]",
+            src: videoPath,
+            ref: videoRef,
+            muted: true,
+            loop: true,
+            controls: true
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/PromoteCard.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+function PromoteCard() {
+    const [videoStatus, setVideoStatus] = (0,react_.useState)(true);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: "w-[80%] shadow-lg mx-[10%] my-10 p-2 rounded-lg bg-gray-200 flex flex-row",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(VideoPlayer, {
+                videoStatus: videoStatus,
+                videoPath: "/vid/getvaccine.mp4"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "m-5",
+                children: [
+                    "Get your vaccine today.",
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        className: "block rounded-md bg-sky-600 hover:bg-indigo-600 my-3 px-10 py-2 text-white shadow-sm",
+                        onClick: ()=>setVideoStatus(!videoStatus),
+                        children: videoStatus ? "Pause" : "Play"
+                    })
+                ]
+            })
+        ]
+    });
+}
+
 
 /***/ }),
 
@@ -422,7 +509,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 12108:
+/***/ 71077:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -451,12 +538,29 @@ const __default__ = proxy.default;
 
 
 /* harmony default export */ const banner = (__default__);
+;// CONCATENATED MODULE: ./src/components/PromoteCard.tsx
+
+const PromoteCard_proxy = (0,module_proxy.createProxy)(String.raw`D:\Code\CU\SW_DEV_PRAC_II\vaccine-book-app\src\components\PromoteCard.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule: PromoteCard_esModule, $$typeof: PromoteCard_$$typeof } = PromoteCard_proxy;
+const PromoteCard_default_ = PromoteCard_proxy.default;
+
+
+/* harmony default export */ const PromoteCard = (PromoteCard_default_);
 ;// CONCATENATED MODULE: ./src/app/page.tsx
 
 
+
 function Home() {
-    return /*#__PURE__*/ jsx_runtime_.jsx("main", {
-        children: /*#__PURE__*/ jsx_runtime_.jsx(banner, {})
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(banner, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(PromoteCard, {})
+        ]
     });
 }
 
