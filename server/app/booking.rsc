@@ -1,5 +1,5 @@
 1:HL["/_next/static/css/28ef638406b1e1a1.css",{"as":"style"}]
-0:["hkeeK9scuZ3386T5cbwhg",[[["",{"children":["booking",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/28ef638406b1e1a1.css","precedence":"next"}]],"$L3"]]]]
+0:["wxHsEZ0I-ynTQ-MtZFKCi",[[["",{"children":["booking",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/28ef638406b1e1a1.css","precedence":"next"}]],"$L3"]]]]
 4:I{"id":6685,"chunks":["222:static/chunks/222-2ad08b3f409be0f1.js","685:static/chunks/685-912c72be5c0f1b08.js","185:static/chunks/app/layout-9c4540f374499d61.js"],"name":"","async":false}
 5:I{"id":3222,"chunks":["222:static/chunks/222-2ad08b3f409be0f1.js","685:static/chunks/685-912c72be5c0f1b08.js","185:static/chunks/app/layout-9c4540f374499d61.js"],"name":"Image","async":false}
 6:I{"id":7767,"chunks":["272:static/chunks/webpack-280ee4e1194c86b8.js","971:static/chunks/fd9d1056-87e3e28da169ca4b.js","596:static/chunks/596-ef52134cf7e38d84.js"],"name":"default","async":false}
