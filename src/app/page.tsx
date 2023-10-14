@@ -5,7 +5,7 @@ import Banner from '@/components/banner'
 import CardPanel from '@/components/CardPanel'
 import PromoteCard from '@/components/PromoteCard'
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Banner />

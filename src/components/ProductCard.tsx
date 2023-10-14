@@ -1,10 +1,11 @@
+'use client'
 import Image from 'next/image'
 import InteractiveCard from './InteractiveCard';
 import { Rating } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 export default function ProductCard(
-	{imgSrc, header, onRatingChange, passedRating}:{imgSrc: string, header: string, onRatingChange:Function, passedRating: number}
+	{imgSrc, header, onRatingChange, passedRating}:{imgSrc: string, header: string, onRatingChange?:Function, passedRating?: number}
 	)
 {
 	const [rating, setRating] = useState(passedRating);
@@ -25,12 +26,16 @@ export default function ProductCard(
 			<div className='p-[16px] h-[25%]'>
 				{header}
 			</div>
+			{
+			onRatingChange?
 			<Rating
 			name="rating"
 			value={rating}
 			onClick={(e)=>{e.stopPropagation();}}
 			onChange={(e, newValue)=>{e.stopPropagation(); setRating(newValue||0); onRatingChange(newValue||0)}}
 			/>
+			:''
+			}
 		</InteractiveCard>
 	)
 }

@@ -1,21 +1,23 @@
+import getHospital from '@/libs/getHospital';
 import Image from 'next/image'
 
-export default function hospitalDetailPage({params}: {params: {hid: string}}) {
-	const mockHospital = new Map()
-	mockHospital.set('001', {name:"Chulalongkorn Hospital", shortName:"chula", img:"/img/chula.jpg"})
-	mockHospital.set('002', {name:"Rajavithi Hospital", shortName:"rajavithi", img:"/img/rajavithi.jpg"})
-	mockHospital.set('003', {name:"Thammasat University Hospital", shortName:"thammasat", img:"/img/thammasat.jpg"})
+export default async function hospitalDetailPage({params}: {params: {hid: string}}) {
+	const hospitalDetail = await getHospital(params.hid);
 	return (
 		<main className="text-center p-5">
-			<h1 className="text-2xl font-medium">hospital ID: {params.hid}</h1>
+			<h1 className="text-2xl font-medium">{hospitalDetail.data.name}</h1>
 			<div className="flex flex-row my-5">
 				<Image
-					src={mockHospital.get(params.hid).img}
-					alt={mockHospital.get(params.hid).name}
+					src={hospitalDetail.data.picture}
+					alt="Hospital Picture"
 					width={0} height={0} sizes="100vw"
 					className="rounded-lg w-[30%] bg-black"
 				/>
-				<div className='text-xl mx-5 my-5'>{(mockHospital.get(params.hid)).name}</div>
+				<div className="text-left">
+					<div className='text-xl mx-5 my-5'>Address: {hospitalDetail.data.address}, {hospitalDetail.data.district}, {hospitalDetail.data.province} {hospitalDetail.data.postalcode}
+					</div>
+					<div className='text-xl mx-5 my-5'>Tel: {hospitalDetail.data.tel}</div>
+				</div>
 			</div>
 		</main>
 	)
