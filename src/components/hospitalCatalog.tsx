@@ -9,7 +9,7 @@ export default async function HospitalCatalog({hospitalRawJson}: { hospitalRawJs
 			<div style={{margin:"20px", display:"flex",flexDirection:"row", alignContent:"space-around", justifyContent:"space-around", flexWrap:"wrap", padding:"10px"}}>
 				{
 				hospitalJson.data.map((hospital:Object)=>(
-					<Link href={`/hospital/${hospital.id}`} className="w-1/5">
+					<Link href={`/hospital/${hospital.id}`} key={hospital.id} className="w-1/5">
 						<ProductCard imgSrc={hospital.picture} header={hospital.name}/>
 					</Link>
 				))
