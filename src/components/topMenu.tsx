@@ -22,11 +22,13 @@ export default async function TopMenu () {
 							Sign-in</div>
 					</Link>
 				}
+				
 				<Link href='/mybooking'
 					className='flex items-center h-full px-2'
 				>My Booking</Link>
 			</div>
 			<div className='flex justify-end w-[50%]'>
+				<TopMenuItem title='Hospitals' pageReg='/hospital'/>
 				<TopMenuItem title='Booking' pageReg='/booking'/>
 				<Link href='/'>
 					<Image src={'/img/medical_chart.png'} className={styles.logoImg}
